@@ -1,11 +1,11 @@
 # command line
-# docker compose up Auth-DB -d
-
+# (Windows) docker compose up Auth-DB -d
+# (ubuntu) docker-compose up Auth-DB
 version: '3.8'
 services:
   Auth-DB:
     image: postgres:13
-    container_name: my-nest-app-Auth-DB
+    container_name: nest-Auth-DB
     environment:
       POSTGRES_DB: nest
       POSTGRES_USER: juel

@@ -1,7 +1,0 @@
-//============how to use this module to another module =================
-//1) import that perticuler module
-//2) constructor(private logger: LoggerService) {}
-//3)      this.logger.info('This is an information log.','fileName');
-//        this.logger.error('This is an error log.','fileName');
-//        this.logger.warn('This is a warning log.','fileName');
-//======================================================================
