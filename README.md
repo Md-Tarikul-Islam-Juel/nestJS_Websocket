@@ -33,7 +33,7 @@ your NestJS projects.
 
 - **Code**: Contains the source code for your project, including all necessary files and modules.
 - **Postman Collection**: Provides pre-configured requests for testing and interacting with your API endpoints in
-  documents folder.
+  the documents folder.
 - **Swagger Documentation (API Documentation)**:
   Generates interactive documentation describing your API endpoints, request parameters, response formats, and
   authentication methods.
@@ -42,25 +42,29 @@ your NestJS projects.
 ## 🚴🏿 Setup Instructions:
 
 1. **Clone the Repository:**
-    - Download or clone the repository to your local machine.
+   - Download or clone the repository to your local machine.
 
 2. **Create Environment File:**
-    - Navigate to the root directory.
-    - Create a `.env` file based on `.env.example`.
-    - Modify the variables in `.env` according to your configuration.
+   - Navigate to the root directory.
+   - Create a `.env` file based on `.env.example`.
+   - Modify the variables in `.env` according to your configuration.
 
 3. **Install Dependencies:**
-    - Open your terminal.
-    - Run `yarn install` or `npm install` to install project dependencies.
+   - Open your terminal.
+   - Run `yarn install` or `npm install` to install project dependencies.
 
-4. **Import Postman Collection:**
-    - Locate `NestJs_webSocket.postman_collection.json` in `documents/postman/`.
-    - For web socket your will find a socket configuration process in `documents/postman/websocket`.
-    - Import the collection into Postman.
+4. **Setup Docker:**
+   - Ensure Docker is installed on your machine.
+   - Run docker-compose up -d to start the PostgreSQL DB container.
+   
+5. **Import Postman Collection:**
+   - Locate `NestJs_webSocket.postman_collection.json` in `documents/postman/`.
+   - For web socket, you will find the socket configuration process in `documents/postman/websocket`.
+   - Import the collection into Postman.
 
-5. **Run the Project:**
-    - Start the project with `npm start` or `yarn start` in the terminal.
+6. **Run the Project:**
+   - Start the project with `npm start` or `yarn start` in the terminal.
 
-6. **Access Swagger Documentation:**
-    - Open `http://localhost:3000/api` in your web browser to view the Swagger documentation.
+7. **Access Swagger Documentation:**
+   - Open `http://localhost:3000/api` in your web browser to view the Swagger documentation.
 
