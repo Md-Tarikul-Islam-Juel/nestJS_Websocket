@@ -29,6 +29,21 @@ export class SocketGateway implements OnGatewayConnection {
             if (!canActivate) {
                 socket.disconnect(true);
             }
+
+            // Handle the WebSocket connection for the authenticated user
+            const roomName = socket.handshake.headers.room;
+            socket.join(roomName);
+
+            this.server
+                .to(socket.id)
+                .emit('app/subscribe', {msg: `connected id = ${socket.id}`});
+            console.log('=================================');
+            console.log(`socket connected Id = ${socket.id}`);
+            console.log('=================================');
+            // console.log(socket.handshake.headers.authorization);
+            // console.log('=================================');
+            // console.log(socket.client);
+            // console.log('=================================');
         } catch (error) {
             console.error('Error handling connection:', error.message);
             socket.disconnect(true);
