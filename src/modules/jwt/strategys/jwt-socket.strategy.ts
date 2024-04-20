@@ -13,6 +13,7 @@ export class JwtSocketStrategy implements CanActivate {
     }
 
     async canActivate(context: ExecutionContext): Promise<boolean> {
+        console.log("--------------------------------")
         const client = context.switchToWs().getClient();
         let JWT = client.handshake.headers.authorization;
         const SECRECT = this.config.get('JWT_SECRET');
@@ -65,5 +66,7 @@ export class JwtSocketStrategy implements CanActivate {
         return user;
     }
 }
+
+
 
 
