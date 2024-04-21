@@ -68,3 +68,7 @@ your NestJS projects.
 7. **Access Swagger Documentation:**
    - Open `http://localhost:3000/api` in your web browser to view the Swagger documentation.
 
+
+## ℹ️ Important Note:
+
+⚠️ Please note that you need to sign up and then sign in to obtain a JSON Web Token (JWT) for authentication.
